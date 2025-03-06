@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <style>
+            div {
+                right: 10px;
+                border: 2px solid green;
+            }
+            
+            
+            div.relative {
+                    position: relative;
+                    left: 110px;
+                    border: 3px solid black;
+            }
+            div.fixed {
+                text-align: center;
+                position: fixed;
+             top:250px;
+                right: 20px;
+                width: 300px;
+                border: 3px solid rgb(114, 218, 250);
+            }
+            div.sticky {
+                position: sticky;
+                top: 1px;
+                left: 20px;
+                width: 100px;
+                border: 3px solid rgb(74, 46, 139);
+            }
+            div.absolute {
+                position: absolute;
+                left: 50px;
+                border: 3px solid rgb(255, 136, 0);
+            }
+         </style>
+    </head>
+    <body>
+        <h2>POSITIONING ACP...</h2>
+        <div>
+            Hey Guys...
+        </div>
+        <div class="sticky">
+            How are you?
+        </div>
+        <div class="relative">
+            I hope you all are fine.
+        </div>
+        <div class="absolute">
+          I am also fine.
+        </div>
+        <div class="fixed">
+          By Until Next Time!
+        </div>
+        
+    </body>
+</html>
