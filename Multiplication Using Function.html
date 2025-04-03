@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Functions</title>
+    </head>
+    <body>
+        <h2>Multiplication Using Functions!</h2>
+        <p>In this project I will be using some functions to make some Multiplication.</p>
+<button type="button" onclick="myfunction(23)">Get Results!</button>
+<p id="result"></p>
+<script>
+    function myfunction(c,e) {
+        if (e=== undefined) {
+            alert ("The value of e is undefined");
+            e= 3;
+
+        }
+        var result=c*e;
+        document.getElementById("result").innerHTML= result;
+    }
+    
+    </script>
+    <button type="button" onclick="adv()">Resutl 2!</button>
+   <script>
+    function adv() {
+        var result = function(a,b) {return a+b};
+  document.getElementIdBy(result(5,8)).innerHTML=5+8;
+    }
+</script>
+    </body>
+</html>
