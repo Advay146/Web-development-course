@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>ACP</p>
+    <p id="details"></p>
+    <p id="hello">
+    </p>
+    <p id="hi"></p>
+    <p id="welcome"></p>
+
+    <script>
+     
+      class Book {
+        constructor(name) {
+          this.bookname = name;
+        }
+
+        present() {
+          return 'I have a Book: ' + this.bookname;
+        }
+      }
+      class Model extends Book {
+        constructor(name, author) {
+          super(name); 
+          this.author = author;
+        }
+        show() {
+          return this.present() + ', it is authored by ' + this.author;
+        }
+      }
+      let myBook = new Model("Lilliput", "Robert Brown");
+      document.getElementById("details").innerHTML = myBook.show();
+
+      class Myname {
+        constructor(name) {
+          this.myname = name;
+        }
+
+        static hello() {
+          return "Hello!";
+        }
+
+        static welcome(x) {
+          return "Welcome " + x.myname;
+        }
+
+        hi() {
+          return "Hi " + this.myname;
+        }
+      }
+
+      let student = new Myname("Advay");
+
+      document.getElementById("hello").innerHTML = Myname.hello();
+      document.getElementById("hi").innerHTML = student.hi();
+      document.getElementById("welcome").innerHTML = Myname.welcome(student);
+    </script>
+  </body>
+</html>
