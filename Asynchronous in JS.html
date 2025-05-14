@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>This is Asynchronous:</h2>
+        <p id="result"></p>
+        <script>
+            async function sub(a,b) {
+          let response = await a - b;
+          display(response);
+            }
+            function display(some) {
+                document.getElementById("result").innerHTML = some;
+            }
+            sub(3,59);
+        </script>
+    </body>
+</html>
