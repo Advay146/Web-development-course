@@ -3,22 +3,32 @@
     <head>
         <script>
             function validateForm() {
-                var x = document.forms[ "myForm"] ["fname"].value;
-                if (x=="") {
+                var x = document.forms["myForm"]["fname"].value;
+                if (x == "") {
                     alert("Name must be filled out");
                     return false;
+                } else {
+                    document.write("Name submitted");
                 }
-                else document.write("Name submitted");
 
-
+                var y = document.forms["myForm"]["fage"].value;
+                if (y == "") {
+                    alert("Age must be filled out");
+                    return false;
+                } else {
+                    document.write("Age submitted");
+                }
             }
         </script>
-        <body>
-            <form name="myForm" onsubmit="validateForm()">
-                Name: <input type="text" name="fname">
-                <input type="submit" value=" Submit">
-                <p id="message"></p>
-            </form>
-        </body>
     </head>
+    <body>
+        <form name="myForm" onsubmit="return validateForm()">
+            Name: <input type="text" name="fname">
+            <input type="submit" value="Submit"><br>
+            <br>
+            Age: <input type="number" name="fage" min="18" required>
+            <input type="submit" value="Submit">
+            <p id="message"></p>
+        </form>
+    </body>
 </html>
